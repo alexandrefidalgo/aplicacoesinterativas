@@ -1,12 +1,12 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "cli": {
-    "analytics": "7569c865-c1be-48ad-babd-e30675291f84"
+    "analytics": "8dee4117-f4ed-492b-ab66-1c1216154d34"
   },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "aula09": {
+    "aula01": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/aula09",
+            "outputPath": "dist/aula01",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "aula09:build:production"
+              "browserTarget": "aula01:build:production"
             },
             "development": {
-              "browserTarget": "aula09:build:development"
+              "browserTarget": "aula01:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "aula09:build"
+            "browserTarget": "aula01:build"
           }
         },
         "test": {
@@ -105,5 +105,5 @@
       }
     }
   },
-  "defaultProject": "aula09"
+  "defaultProject": "aula01"
 }
