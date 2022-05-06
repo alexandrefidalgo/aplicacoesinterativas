@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Endereco } from '../model/endereco';
 
 @Injectable({
   providedIn: 'root'
@@ -7,4 +9,8 @@ import { Injectable } from '@angular/core';
 export class EnderecoService {
 
   constructor(private http: HttpClient) { }
+
+  public obterEndereco(cep: string): Observable<Endereco> {
+    return this.http.get<Endereco>(`https://viacep.com.br/ws/${cep}/json/`);
+  }
 }
