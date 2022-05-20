@@ -1,0 +1,17 @@
+<h2>Manutenção de Clientes</h2>
+
+<ul>
+  <li *ngFor="let cliente of clientes">
+    <span (click)="editar(cliente)">{{cliente.cpf}} - {{cliente.nome}}</span>  - <span (click)="excluir(cliente.id)">X</span>
+  </li>
+</ul>
+
+<button (click)="novo()">Novo</button>
+
+<div *ngIf="cliente">
+  <input placeholder="Nome" [(ngModel)]="cliente.nome">
+  <br>
+  <input placeholder="CPF" [(ngModel)]="cliente.cpf">
+  <br>
+  <button (click)="salvar()">Salvar</button>
+</div>
