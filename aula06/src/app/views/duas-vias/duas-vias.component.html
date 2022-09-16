@@ -1,1 +1,39 @@
-<p>duas-vias works!</p>
+<h2>Exemplos Binding de Duas Vias</h2>
+
+<h3>Exemplo 01</h3>
+
+<input type="test" [(ngModel)]="nome">
+
+<br>
+
+{{nome}}
+
+<br>
+
+<button (click)="limparNome()">Limpar</button>
+
+<hr>
+
+<h3>Exemplo 02</h3>
+
+<input type="number" [(ngModel)]="val1"> +
+<input type="number" [(ngModel)]="val2">
+
+<br>
+
+{{val1 + val2}}
+
+<hr>
+
+<h3>Exemplo 03</h3>
+
+<input type="test" [(ngModel)]="nome"> +
+<input type="test" [(ngModel)]="sobreNome">
+
+<br>
+
+{{ obterNomeCompleto() }}
+
+<br>
+
+<hr>
