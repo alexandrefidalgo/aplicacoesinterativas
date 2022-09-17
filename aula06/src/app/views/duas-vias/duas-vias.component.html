@@ -37,3 +37,61 @@
 <br>
 
 <hr>
+
+<h3>Exemplo 04</h3>
+
+<input type="color" [(ngModel)]="cor">
+
+{{ cor }}
+
+<br>
+
+<div style="height: 100px; background-color: {{cor}}">
+
+</div>
+<hr>
+
+<h3>Exemplo 05</h3>
+
+<select [(ngModel)]="generoFilme">
+  <option value="terror">Terror</option>
+  <option value="drama">Drama</option>
+  <option value="fic">Ficção Cientifíca</option>
+</select>
+
+<br>
+
+{{ generoFilme }}
+
+<br>
+
+<img style="width: 200px" src="assets/{{generoFilme}}.jpg">
+<hr>
+
+<h3>Exemplo 06</h3>
+
+<input id="contatoTelefone" type="checkbox" [(ngModel)]="contatoTelefone">
+<label for="contatoTelefone">Contato por Telefone</label>
+<br>
+Contato por Telefone: {{contatoTelefone}}
+<br>
+
+<input id="contatoEmail" type="checkbox" [(ngModel)]="contatoEmail">
+<label for="contatoEmail">Contato por Email</label>
+<br>
+Contato por Email: {{contatoEmail}}
+<hr>
+
+<h3>Exemplo 07</h3>
+
+<input id="classe-mago" type="radio" value="mago" [(ngModel)]="classeHeroi">
+<label for="classe-mago">Mago</label>
+<br>
+<input id="classe-guerreiro" type="radio" value="guerreiro" [(ngModel)]="classeHeroi">
+<label for="classe-guerreiro">Guerreiro</label>
+<br>
+<input id="classe-arqueiro" type="radio" value="arqueiro" [(ngModel)]="classeHeroi">
+<label for="classe-arqueiro">Arqueiro</label>
+<br>
+{{classeHeroi}}
+<hr>

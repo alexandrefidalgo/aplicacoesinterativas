@@ -13,6 +13,15 @@ export class DuasViasComponent implements OnInit {
   val1 = 0;
   val2 = 0;
 
+  cor = '';
+
+  generoFilme = '';
+
+  contatoTelefone = false;
+  contatoEmail = false;
+
+  classeHeroi = '';
+
   constructor() { }
 
   ngOnInit(): void {
