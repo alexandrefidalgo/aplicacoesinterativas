@@ -1,0 +1,29 @@
+<h2>Exemplo ngFor</h2>
+
+<h3>1</h3>
+  <ul>
+    <li *ngFor="let animal of animais">
+      {{animal}}
+    </li>
+  </ul>
+
+<h3>2</h3>
+  <table border="2">
+    <tr>
+      <th>
+        Título
+      </th>
+      <th>
+        Nota
+      </th>
+    </tr>
+    <tr *ngFor="let filme of filmes; let i = index">
+      <td>
+        {{filme}}
+      </td>
+      <td>
+        {{notas[i]}}
+      </td>
+    </tr>
+  </table>
+<hr>

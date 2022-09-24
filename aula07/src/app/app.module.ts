@@ -8,6 +8,9 @@ import { ExemploNgifComponent } from './views/exemplo-ngif/exemplo-ngif.componen
 import { Exercicio01Component } from './views/exercicio01/exercicio01.component';
 import { Exercicio02Component } from './views/exercicio02/exercicio02.component';
 import { Exercicio03Component } from './views/exercicio03/exercicio03.component';
+import { ExemploNgforComponent } from './views/exemplo-ngfor/exemplo-ngfor.component';
+import { Exercicio04Component } from './views/exercicio04/exercicio04.component';
+import { Exercicio05Component } from './views/exercicio05/exercicio05.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { Exercicio03Component } from './views/exercicio03/exercicio03.component'
     ExemploNgifComponent,
     Exercicio01Component,
     Exercicio02Component,
-    Exercicio03Component
+    Exercicio03Component,
+    ExemploNgforComponent,
+    Exercicio04Component,
+    Exercicio05Component
   ],
   imports: [
     BrowserModule,
