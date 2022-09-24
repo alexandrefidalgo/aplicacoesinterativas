@@ -1,0 +1,17 @@
+<h3>Exercicio 01</h3>
+
+  <input type="number" [(ngModel)]="numero">
+
+  <br><br>
+
+  <div *ngIf="numero > 0">
+    Positivo
+  </div>
+  <div *ngIf="numero < 0">
+    Negativo
+  </div>
+  <div *ngIf="numero == 0">
+    Zero
+  </div>
+
+<hr>

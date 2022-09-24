@@ -1,0 +1,14 @@
+<h3>Exemplo ngIf</h3>
+
+  Tente acertar o nome...
+  <br><br>
+
+  <input type="text" [(ngModel)]="nome">
+
+  <br><br>
+
+  <div *ngIf="nome == 'Alexandre'">
+    Nome: {{msg}}
+  </div>
+
+<hr>

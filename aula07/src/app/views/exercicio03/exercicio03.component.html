@@ -1,0 +1,19 @@
+<h3>Exercicio 03</h3>
+
+  <input type="number" [(ngModel)]="val1">
+
+  <input type="number" [(ngModel)]="val2">
+
+  <br><br>
+
+  <div *ngIf="val1 && val2 ">
+    <button (click)="somar()">Somar</button>
+    <button (click)="multiplicar()">Multiplicar</button>
+    <button (click)="subtrair()">Subtrair</button>
+    <button (click)="dividir()">Dividir</button>
+  </div>
+  <br>
+  Resultado: <input type="number" [(ngModel)]="resultado">
+
+  <br>
+<hr>
