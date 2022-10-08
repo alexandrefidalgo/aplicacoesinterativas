@@ -1,0 +1,20 @@
+<h3>Lista de Jogos</h3>
+
+  <ul>
+    <li *ngFor="let jogo of jogos; let i = index;" >
+    <span (click)="selecionarJogo(jogo)"> {{jogo.nome}} - {{jogo.produtora}} - {{jogo.plataforma}} - {{jogo.genero}} - </span>
+    <span (click)="removerJogo(i)">X</span>
+    </li>
+  </ul>
+
+  <div *ngIf="jogoSelecionado">
+    <input type="text" [(ngModel)]="jogoSelecionado.nome">
+    <input type="text" [(ngModel)]="jogoSelecionado.produtora">
+    <input type="text" [(ngModel)]="jogoSelecionado.plataforma">
+    <input type="text" [(ngModel)]="jogoSelecionado.genero">
+    <button (click)="fechar()">Fechar</button>
+  </div>
+
+  <button (click)="criarJogo()">Adicionar Novo Jogo</button>
+<hr>
+
