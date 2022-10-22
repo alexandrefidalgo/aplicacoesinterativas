@@ -1,4 +1,4 @@
-export class jogo {
+export class Jogo {
     id?: number;
     nome = '';
     genero = '';
