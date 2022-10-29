@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+}
+
+body {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(1,135,237,1) 0%, rgba(0,212,255,1) 100%);
+    min-height: 100%;
+    color: black;
+    margin: 0;
+}
+
+html {
+    min-height: 100%;
+}
+
+h2 {
+    margin: 0;
+}
