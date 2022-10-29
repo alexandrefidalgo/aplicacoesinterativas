@@ -1,8 +1,9 @@
 <h2>Gestor de Jogos</h2>
 
 <ul>
-    <li *ngFor="let jogo of jogos" (click)="selecionarJogo(jogo)">
-        {{jogo.nome}} ({{jogo.plataforma}})
+    <li *ngFor="let jogo of jogos">
+        <span (click)="selecionarJogo(jogo)">{{jogo.nome}} ({{jogo.plataforma}})</span>
+        <span (click)="excluir(jogo.id)">X</span>
     </li>    
 </ul>
 
@@ -26,4 +27,13 @@
     <br>
 
     <input type="text" [(ngModel)]="jogoSelecionado.genero">
+
+    <br>
+    <br>
+
+    <button (click)="salvar()">Salvar</button>
+    <button (click)="cancelar()">Cancelar</button>
 </div>
+    <br>
+
+    <button (click)="novo()">Novo</button>

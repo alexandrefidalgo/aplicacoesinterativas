@@ -11,21 +11,10 @@ export class JogoComponent implements OnInit {
 
   jogos: Jogo[] = [];
   jogoSelecionado?: Jogo
+  estaEditando = false;
 
   constructor(private jogoService: JogoService) { 
-    const jogo = new Jogo();
-    jogo.nome = 'The Last of Us';
-    jogo.plataforma = 'PS4';
-    jogo.genero = 'Survival Horror';
-
-    jogoService.inserir(jogo);
-
-    const jogo2 = new Jogo();
-    jogo2.nome = 'Mario';
-    jogo2.plataforma = 'Nitendo';
-    jogo2.genero = '';
-
-    jogoService.inserir(jogo2);
+   
   }
 
   ngOnInit(): void {
@@ -37,5 +26,34 @@ export class JogoComponent implements OnInit {
   }
   selecionarJogo(jogo: Jogo) {
     this.jogoSelecionado = jogo;
+    this.estaEditando = true;
+  }
+
+  salvar() {
+    if (this.estaEditando){
+      this.jogoService.atualizar(this.jogoSelecionado);
+    }
+    else {
+      this.jogoService.inserir(this.jogoSelecionado);
+    }
+    this.cancelar();
+  }
+
+  cancelar() {
+    this.jogoSelecionado = undefined;
+    this.atualizarLista();
+  }
+
+  novo(){
+    this.jogoSelecionado = new Jogo();
+    this.estaEditando = false;
+  }
+
+  excluir(id?: number){
+    if (!id){
+      return;
+    }
+    this.jogoService.remover(id);
+    this.atualizarLista();
   }
 }
