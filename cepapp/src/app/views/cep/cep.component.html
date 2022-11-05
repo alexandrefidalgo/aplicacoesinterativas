@@ -1,0 +1,14 @@
+<h2>Consultar Cep</h2>
+
+<input type="textt" placeholder="CEP" [(ngModel)]="cep">
+
+<button (click)="consultarCep()">Consultar</button>
+
+<div *ngIf="endereco">
+    <h2>Cep: {{endereco.cep}}</h2>
+    <p>Logradouro: {{endereco.logradouro}}</p>
+    <p>Complemento: {{endereco.complemento}}</p>
+    <p>Bairro: {{endereco.bairro}}</p>
+    <p>Localidade: {{endereco.localidade}}</p>
+    <p>UF: {{endereco.uf}}</p>
+</div>
