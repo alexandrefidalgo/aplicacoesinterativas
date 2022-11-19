@@ -1,4 +1,27 @@
-<a routerLink="/cliente">Gestor de Clientes</a>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <button mat-icon-button>
+            <mat-icon>menu</mat-icon>
+        </button>
+        <h1>Gestor de Clientes</h1>
+    </mat-toolbar-row>
+</mat-toolbar>
 
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+    <mat-sidenav mode="side" [opened]="true">
+        <mat-list>
+            <a routerLink="/cliente" mat-list-item>
+                Clientes
+            </a>
+        </mat-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content style="min-height: calc(100vh - 64px)">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+
 
