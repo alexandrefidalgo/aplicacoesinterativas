@@ -1,27 +1,42 @@
 <h2>Gerenciar Clientes</h2>
 
-<ul>
-  <li *ngFor="let cliente of listaClientes">
-    <span (click)="selecionar(cliente)">{{cliente.nome}} - {{cliente.cpf}} </span>
-    <span (click)="excluir(cliente.id)"> X</span>
-  </li>
-</ul>
+<mat-selection-list [multiple]="false">
+  <mat-list-option *ngFor="let cliente of listaClientes">
+    <div class="item-lista">
+      <span (click)="selecionar(cliente)">{{cliente.nome}} - {{cliente.cpf}} </span>
+      <button mat-icon-button color="accent" (click)="excluir(cliente.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+  </mat-list-option>
+</mat-selection-list>
 
 <br><br>
 
-<button (click)="novo()">Novo</button>
+<button class="fab-add" mat-fab (click)="novo()">
+  <mat-icon>add</mat-icon>
+</button>
 
 <br><br>
 
 <div *ngIf="cliente">
-  <input type="text" placeholder="Nome" [(ngModel)]="cliente.nome">
+
+  <mat-form-field style="width: 100%">
+    <mat-label>Nome</mat-label>
+    <input type="text" [(ngModel)]="cliente.nome" matInput>
+  </mat-form-field>
 
   <br><br>
 
-  <input type="text" placeholder="CPF" [(ngModel)]="cliente.cpf">
+  <mat-form-field style="width: 100%">
+    <mat-label>CPF</mat-label>
+    <input type="text" [(ngModel)]="cliente.cpf" matInput>
+  </mat-form-field>
+  
+  
 
-  <button (click)="cancelar()">Cancelar</button>
-  <button (click)="salvar()">Salvar</button>
+  <button mat-raised-button (click)="cancelar()">Cancelar</button>
+  <button color="primary" style="margin-left: 20px" mat-raised-button (click)="salvar()">Salvar</button>
 </div>
 
 

@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-        <button mat-icon-button>
+        <button mat-icon-button (click)="sidenav.toggle()">
             <mat-icon>menu</mat-icon>
         </button>
         <h1>Gestor de Clientes</h1>
@@ -8,7 +8,7 @@
 </mat-toolbar>
 
 <mat-sidenav-container>
-    <mat-sidenav mode="side" [opened]="true">
+    <mat-sidenav mode="side" #sidenav [opened]="true">
         <mat-list>
             <a routerLink="/cliente" mat-list-item>
                 Clientes
@@ -17,7 +17,9 @@
     </mat-sidenav>
 
     <mat-sidenav-content style="min-height: calc(100vh - 64px)">
-        <router-outlet></router-outlet>
+        <mat-card class="mat-elevation-z3  cartao">
+            <router-outlet></router-outlet>
+        </mat-card>
     </mat-sidenav-content>
 </mat-sidenav-container>
 
